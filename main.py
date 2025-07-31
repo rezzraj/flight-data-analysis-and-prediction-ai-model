@@ -20,14 +20,15 @@ plt.show()
 sns.barplot(data=df, x='airline',y='price')
 plt.show()
 
+
+#no of flights for all airlines
+sns.countplot(data=df, x= 'airline')
+plt.show()
+
+
 #airline vs no of flights
 airline_counts= df['airline'].value_counts().reset_index()
 airline_counts.columns=['airline','flight_count']
-
-#no of flights for all airlines
-print(airline_counts)
-sns.barplot(data=airline_counts, x=airline_counts.airline, y=airline_counts.flight_count)
-plt.show()
 
 #which airline has the longest flight
 max_duration=df['duration'].max()
