@@ -40,12 +40,19 @@ Output=
 
 
 TRAINING MODELS
+
 accuracy Random forest regressor model: 0.91
+
 error margin in Rupees Random forest regressor model : 3676.83
+
 accuracy Random liner regression model: 0.9
+
 error margin in Rupees Random liner regression model : 4461.07
+
 Predicted Ticket Price random forest regressor: 13506.51
+
 Predicted Ticket Price liner regressor: 7173.56
+
 
 
 
