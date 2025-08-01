@@ -5,11 +5,11 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import r2_score,mean_absolute_error
 from sklearn.linear_model import LinearRegression
 
+#loading the file
+
 
 df=pd.read_csv('airlines_flights_data.csv')
 df=df.dropna()
-
-#training the Random forest regressor model
 
 
 #converting all strings to numbers for model to train on
@@ -23,9 +23,13 @@ y=dfm['price']
 #splitting data into training vs testing
 x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=0.2,random_state=42)
 
+
+
 #training Random forest regressor model
 model=RandomForestRegressor()
 model.fit(x_train,y_train)
+
+
 #training linear regression model
 model2=LinearRegression()
 model2.fit(x_train,y_train)
