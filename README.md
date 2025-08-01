@@ -1,11 +1,11 @@
 
-📦 Dataset Source: from kaggle (https://www.kaggle.com/datasets/rohitgrewal/airlines-flights-data/data)
+ Dataset Source: from kaggle (https://www.kaggle.com/datasets/rohitgrewal/airlines-flights-data/data)
 
 
-🧾 Overview
+ Overview
 This project analyzes and models flight booking data scraped from a popular travel website. The dataset contains flight travel details between major Indian cities. The aim is to explore the data, visualize key insights, and train ML models to predict airline ticket prices based on several features.
 
-📊 Dataset Features
+Dataset Features
 The dataset includes the following columns:
 
 Airline: Name of the airline company (6 unique airlines)
@@ -43,9 +43,9 @@ Model	Accuracy (R² Score)	Error Margin (₹)	Predicted Ticket Price
 Random Forest Regressor	0.91	₹3676.83	₹13,506.51
 Linear Regression	0.90	₹4461.07	₹7173.56
 
-✅ Random Forest Regressor showed better accuracy and lower error margin.
+ Random Forest Regressor showed better accuracy and lower error margin.
 
-📈 Data Analysis & Visualizations
+ Data Analysis & Visualizations
 Using Seaborn, several visual insights were generated (see visualizations/ folder):
 
 Total cities analyzed: 6
@@ -70,9 +70,9 @@ Air India = ₹23,507.02
 
 Vistara = ₹30,396.54
 
-💡 AirAsia offers the best value for money overall.
+ AirAsia offers the best value for money overall.
 
-📂 Project Structure
+ Project Structure
 Copy
 Edit
 ├── airlines_flights_data.csv
@@ -82,7 +82,7 @@ Edit
 │   ├── longest_flight_airline.png
 │   └── ...
 ├── README.md
-🚀 Future Improvements
+ Future Improvements
 Hyperparameter tuning
 
 Use of XGBoost or GradientBoost
