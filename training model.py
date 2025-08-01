@@ -6,8 +6,6 @@ from sklearn.metrics import r2_score,mean_absolute_error
 from sklearn.linear_model import LinearRegression
 
 #loading the file
-
-
 df=pd.read_csv('airlines_flights_data.csv')
 df=df.dropna()
 

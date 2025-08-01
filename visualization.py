@@ -4,7 +4,7 @@ import seaborn as sns
 
 
 
-
+#loading the file
 df=pd.read_csv('airlines_flights_data.csv')
 df=df.dropna()
 
@@ -15,6 +15,7 @@ print(f'No of cities being analysed {df['source_city'].unique()}')
 
 
 #comparing different values by plotting graphs
+
 #ariline vs duration
 max_dur=df.groupby('airline')['duration'].max().reset_index()
 sns.barplot(x='airline', y='duration', data=max_dur)
@@ -22,6 +23,7 @@ plt.title('Airline Vs Duration ', fontsize='16', fontweight='bold')
 plt.xlabel('all airlines')
 plt.ylabel('duration in hours')
 plt.show()
+
 #duration vs price
 grouped=df.groupby('duration')['price'].mean().reset_index()
 sns.histplot(data=grouped, x= 'duration', y='price')
@@ -33,6 +35,7 @@ plt.show()
 
 #no of flights for all airlines
 sns.countplot(data=df, x= 'airline')
+plt.title('no of flights count for each airline')
 plt.show()
 
 #which airline has the longest flight
