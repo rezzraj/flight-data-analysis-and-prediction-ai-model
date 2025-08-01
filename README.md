@@ -55,14 +55,8 @@ the graphs are provided in the visualization folder attached
 
 Air_India Had the longest flight
 
-Avg Price of each airline 
-     airline         price
-0    AirAsia   4091.072742
-1     Indigo   5324.216303
-2   GO_FIRST   5652.007595
-3   SpiceJet   6179.278881
-4  Air_India  23507.019112
-5    Vistara  30396.536302
+Avg Price of each airline -
+    AirAsia = 4091.072742, Indigo = 5324.216303, GO_FIRST = 5652.007595 ,  SpiceJet= 6179.278881, Air_India = 23507.019112, Vistara = 30396.536302
 
 AirAsia has the best value for money
 
