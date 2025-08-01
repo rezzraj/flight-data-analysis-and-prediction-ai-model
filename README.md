@@ -72,22 +72,8 @@ Vistara = ₹30,396.54
 
  AirAsia offers the best value for money overall.
 
- Project Structure
-Copy
-Edit
-├── airlines_flights_data.csv
-├── model_training.ipynb
-├── visualizations/
-│   ├── avg_price_by_airline.png
-│   ├── longest_flight_airline.png
-│   └── ...
-├── README.md
- Future Improvements
-Hyperparameter tuning
 
-Use of XGBoost or GradientBoost
 
-Deployment as a web app using Flask or Streamlit
 
-Real-time flight data integration
+
 
