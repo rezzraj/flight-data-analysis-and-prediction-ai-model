@@ -56,7 +56,6 @@ the graphs are provided in the visualization folder attached
 Air_India Had the longest flight
 
 Avg Price of each airline 
-
      airline         price
 0    AirAsia   4091.072742
 1     Indigo   5324.216303
