@@ -28,9 +28,9 @@ Duration: Total travel time (continuous feature in hours)
 
 Days Left: Days left from booking date to travel date
 
-Price: 🎯 Target variable (flight price in INR)
+Price:  Target variable (flight price in INR)
 
-🤖 Model Training & Evaluation
+ Model Training & Evaluation
 Two machine learning models were trained using Scikit-learn:
 
 Linear Regression
