@@ -1,0 +1,36 @@
+VISUALIZATION-
+No of cities being analysed ['Delhi' 'Mumbai' 'Bangalore' 'Kolkata' 'Hyderabad' 'Chennai']
+Air_India Had the longest flight
+Avg Price of each airline
+     airline         price
+0    AirAsia   4091.072742
+1     Indigo   5324.216303
+2   GO_FIRST   5652.007595
+3   SpiceJet   6179.278881
+4  Air_India  23507.019112
+5    Vistara  30396.536302
+AirAsia has the best value for money
+
+
+
+
+
+AIRLINE PRICE PREDICTOR-
+
+input-
+sample=pd.DataFrame([{'airline':'Indigo',
+                      'source_city':'Delhi',
+                      'departure_time':'Night',
+                      'destination_city':'Mumbai',
+                      'class':'Economy',
+                      'days_left':'1'}])
+
+
+output-
+
+accuracy Random forest regressor model: 0.91
+error margin in Rupees Random forest regressor model : 3668.24
+accuracy Random liner regression model: 0.9
+error margin in Rupees Random liner regression model : 4461.07
+Predicted Ticket Price random forest regressor: 11735.43
+Predicted Ticket Price liner regressor: 7173.56
