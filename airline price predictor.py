@@ -1,9 +1,12 @@
 import pandas as pd
 import sklearn
+from numpy.ma.core import indices
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import r2_score,mean_absolute_error
 from sklearn.linear_model import LinearRegression
+from matplotlib import pyplot as plt
+import seaborn as sns
 
 #loading the file
 df=pd.read_csv('airlines_flights_data.csv')
@@ -27,6 +30,18 @@ x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=0.2,random_state=42
 model=RandomForestRegressor()
 model.fit(x_train,y_train)
 
+#feature importance for first model
+importance=model.feature_importances_
+features=x_train.columns
+indices= importance.argsort()[::-1]
+
+#plotting
+plt.figure(figsize=(10,6))
+plt.barh(features[indices][:15], importance[indices][:15])
+plt.tight_layout()
+plt.show()
+
+
 
 #training linear regression model
 model2=LinearRegression()
@@ -48,12 +63,12 @@ print(f'error margin in Rupees Random liner regression model : {round((mean_abso
 
 #testing by user input
 
-sample=pd.DataFrame([{'airline':'Indigo',
+sample=pd.DataFrame([{'airline':'Air_India',
                       'source_city':'Delhi',
-                      'departure_time':'Night',
+                      'departure_time':'Day',
                       'destination_city':'Mumbai',
                       'class':'Economy',
-                      'days_left':'1'}])
+                      'days_left':'100'}])
 
 sample_encoded = pd.get_dummies(sample)
 sample_encoded = sample_encoded.reindex(columns=x_train.columns, fill_value=0)
