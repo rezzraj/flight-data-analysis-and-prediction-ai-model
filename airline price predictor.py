@@ -11,7 +11,7 @@ import seaborn as sns
 #loading the file
 df=pd.read_csv('airlines_flights_data.csv')
 df=df.dropna()
-
+print(df.columns)
 
 #converting all strings to numbers for model to train on
 dfm=pd.get_dummies(df,columns=['airline','source_city','class','departure_time','destination_city'],drop_first=True)
@@ -38,14 +38,20 @@ indices= importance.argsort()[::-1]
 #plotting
 plt.figure(figsize=(10,6))
 plt.barh(features[indices][:15], importance[indices][:15])
+plt.title('top 15 factors affecting price (descending order)')
 plt.tight_layout()
+
 plt.show()
+
 
 
 
 #training linear regression model
 model2=LinearRegression()
 model2.fit(x_train,y_train)
+
+
+
 
 #predicting the output first model
 y_pred=model.predict(x_test)
@@ -62,13 +68,19 @@ print(f'error margin in Rupees Random liner regression model : {round((mean_abso
 
 
 #testing by user input
+airlineInp=input('Which airline u want SpiceJet AirAsia Vistara GO_FIRST Indigo Air_India: ')
+sourceCityinp=input('enter the source city(Delhi Mumbai Bangalore Kolkata Hyderabad Chennai: ').capitalize()
+departuretimeinp=input('enter departure time(Evening Early_Morning Morning Afternoon Night Late_Night): ').capitalize()
+destinationCinp=input('enter destination: ').capitalize()
+classinp=input('which class u flying(economy, business) : ').capitalize()
+dayslinp=input('how prior are u booking (no of days left): ')
 
-sample=pd.DataFrame([{'airline':'Air_India',
-                      'source_city':'Delhi',
-                      'departure_time':'Day',
-                      'destination_city':'Mumbai',
-                      'class':'Economy',
-                      'days_left':'100'}])
+sample=pd.DataFrame([{'airline':airlineInp,
+                      'source_city':sourceCityinp,
+                      'departure_time':departuretimeinp,
+                      'destination_city':destinationCinp,
+                      'class':classinp,
+                      'days_left':dayslinp}])
 
 sample_encoded = pd.get_dummies(sample)
 sample_encoded = sample_encoded.reindex(columns=x_train.columns, fill_value=0)

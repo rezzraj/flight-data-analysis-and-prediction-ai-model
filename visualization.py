@@ -12,8 +12,9 @@ df=df.dropna()
 
 #total number of cities
 print(f'No of cities being analysed {df['source_city'].unique()}')
-
-
+print(f'no of airline being analysed {df['airline'].unique()} ')
+print(f'no of seat classes  {df['class'].unique()} ')
+print(f'departure times  {df['departure_time'].unique()} ')
 #comparing different values by plotting graphs
 
 #ariline vs duration
