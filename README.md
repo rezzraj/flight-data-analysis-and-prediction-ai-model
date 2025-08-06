@@ -45,7 +45,8 @@ Models use key features like **airline, cities, class, departure time, etc.**, t
 | **Linear Regression**       | 0.90                 | ₹4461.07          | ₹7173.56               |
 
 **Random Forest Regressor showed better accuracy and lower error margin.**
-##**Also added feature importance graph for random forests model ie. which features the model is most sensitive to**
+---
+## **Also added feature importance graph for random forests model ie. which features the model is most sensitive to**
 
 ---
 
