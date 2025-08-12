@@ -7,7 +7,7 @@
 
 ## **📌 Live Demo**
 You can try the deployed Streamlit app here:  
-[🚀 **Open Flight Price Predictor**](YOUR_STREAMLIT_APP_URL_HERE)
+[🚀 **Open Flight Price Predictor**](https://rezzraj-flight-data-analysis-and-prediction-ai-model-app-byg5v6.streamlit.app/)
 
 ---
 
